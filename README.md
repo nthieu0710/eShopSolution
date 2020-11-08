@@ -1,4 +1,4 @@
-# ASP .NET Core 3.1 project by Hieu
+# ASP .NET Core 3.1 project by HieuNT
 ## Technologies 
 - ASP .Net core 3.1
 - Entity Framework Core 3.1
