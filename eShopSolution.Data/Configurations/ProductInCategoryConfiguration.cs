@@ -16,10 +16,10 @@ namespace eShopSolution.Data.Configurations
             builder.ToTable("ProductInCategories");
 
             builder.HasOne(t => t.Product).WithMany(pc => pc.ProductInCategories)
-                                                    .HasForeignKey(pc => pc.ProductId);
+                .HasForeignKey(pc => pc.ProductId);
 
             builder.HasOne(t => t.Category).WithMany(pc => pc.ProductInCategories)
-                                                    .HasForeignKey(pc => pc.CategoryId);
+              .HasForeignKey(pc => pc.CategoryId);
         }
     }
 }

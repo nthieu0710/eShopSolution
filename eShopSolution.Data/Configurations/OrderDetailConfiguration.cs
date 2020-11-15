@@ -12,9 +12,11 @@ namespace eShopSolution.Data.Configurations
         public void Configure(EntityTypeBuilder<OrderDetail> builder)
         {
             builder.ToTable("OrderDetails");
-            builder.HasKey(t => new{ t.OrderId, t.ProductId } );
-            builder.HasOne(t => t.Order).WithMany(t => t.OrderDetails).HasForeignKey(x => x.OrderId);
-            builder.HasOne(t => t.Product).WithMany(t => t.OrderDetails).HasForeignKey(x => x.ProductId);
+
+            builder.HasKey(x => new { x.OrderId, x.ProductId });
+
+            builder.HasOne(x => x.Order).WithMany(x => x.OrderDetails).HasForeignKey(x => x.OrderId);
+            builder.HasOne(x => x.Product).WithMany(x => x.OrderDetails).HasForeignKey(x => x.ProductId);
         }
     }
 }
